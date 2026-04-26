@@ -1,0 +1,12 @@
+{
+  "manifest_version": 3,
+  "name": "Hide Reels",
+  "version": "1.0",
+  "description": "Removes the Reels section from the feed.",
+  "content_scripts": [
+    {
+      "matches": ["https://*.facebook.com/*"],
+      "js": ["content.js"]
+    }
+  ]
+}
