@@ -17,3 +17,13 @@ This doesn't collect any data or send anything to a server. It’s just a local 
 
 ### Note
 Since Facebook updates their site layout pretty often, this might stop working if they change the names of their code containers. If that happens, the script just needs a quick update to look for the new names.
+### How to fix it if it stops working
+Facebook changes its internal code names frequently. If Reels suddenly start appearing again, it means the "container name" in the code has changed. Here is how to find the new one:
+
+1. **Find the name:** Go to Facebook, right-click on the word "Reels" in your feed, and select **Inspect**.
+2. **Locate the box:** In the side window that opens, hover over the lines of code until the entire Reels section on the page turns blue. 
+3. **Copy the class:** Look for a part that says `class="something"`. The "something" (like `x1lliihq`) is the new name.
+4. **Update the script:** Open `content.js`, find the line with `.closest('.x1lliihq')`, and swap out the old name for the new one. Keep the dot at the beginning!
+5. **Reload:** Save the file and click the "Refresh" icon on the extension in your browser.
+
+If you aren't sure which name to pick, you can always reach out or open an "Issue" on this repo, and I'll help find the update.
